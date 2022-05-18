@@ -48,7 +48,7 @@ public class PeopleController {
         if(saveResult){
             System.out.println("저장성공");
             return "index";
-        } elsl {
+        } else  {
             System.out.println("저장실패");
             return "save-form";
         }
