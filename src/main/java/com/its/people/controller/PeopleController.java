@@ -44,8 +44,14 @@ public class PeopleController {
 //        peopleDTO.setAge(age);
         // @ModelAttribute PeopleDTO peopleDTO 쓰면 위의 과정 3줄이 필요없음
         System.out.println("peopleDTO = " + peopleDTO);
-        peopleService.save1(peopleDTO);
-        return null;
+        boolean saveResult = peopleService.save1(peopleDTO);
+        if(saveResult){
+            System.out.println("저장성공");
+            return "index";
+        } elsl {
+            System.out.println("저장실패");
+            return "save-form";
+        }
     }
 
 
