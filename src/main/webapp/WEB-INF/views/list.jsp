@@ -2,17 +2,20 @@
   Created by IntelliJ IDEA.
   User: USER
   Date: 2022-05-18
-  Time: 오전 9:08
+  Time: 오후 2:22
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
-    <h2>index.jps</h2>
-    <a href="save-form">save-form 이동</a><br>
-    <a href="/findAll">리스트 출력</a>
+    <h2>List.jsp</h2>
+    <c:forEach var="people" items="${peopleList}">
+        ${people.name}
+        ${people.age}<br>
+    </c:forEach>
 </body>
 </html>
